@@ -5,6 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
+      rel="shortcut icon"
+      href="/assets/academic_graduate_cap_icon_225725.ico.crdownload"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
       rel="stylesheet"
       href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css"
     />
@@ -12,7 +18,7 @@
     <title></title>
   </head>
   <body>
-    <div class="">
+    <div class="header">
       <div class="w3-bar w3-black w3-xlarge">
         <a href="/index.html" class="w3-bar-item w3-button w3-mobile">Inicio</a>
         <a
@@ -38,49 +44,95 @@
         >
       </div>
     </div>
-    <form>
-      <h2>Formulário para adicionar pessoas:</h2>
-      <!-- Grid -->
-      <div class="grid">
-        <label for="firstname">
-          Nome*:
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Nome Completo"
-            required
-          />
-        </label>
-      
 
-      <label for="email">E-mail*:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="nome@dominio.com"
-        required
-      />
-      <small>Nunca divulgaremos :)</small>
-      
-      <label for="date">
-        Data*:
-        <input
-          type="date"
-          id="date"
-          name="date"
-          placeholder=""
-          required
-        />
+    <h2 class="w3-margin">Formulário para adicionar pessoas:</h2>
 
+    <section class="section1 w3-margin">
+      <form>
+        <div class="grid w3-margin-bottom">
+          <!-- Grid -->
+
+          <div for="firstname">
+            Nome*:
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nome Completo"
+              required
+            />
+          </div>
+
+          <div for="email">
+            E-mail*:
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nome@dominio.com"
+              required
+            />
+            <small class="w3-margin">Nunca divulgaremos :)</small>
+          </div>
+
+          <div for="date">
+            Data*:
+            <input type="date" id="date" name="date" placeholder="" required />
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <div class="">
+        <form class="w3-container w3-card-4">
+          <h2>Gênero*:</h2>
+          <p>
+            <input
+              class="w3-radio"
+              type="radio"
+              name="gender"
+              value="male"
+              checked
+              required
+            />
+            <label>Masculino</label>
+          </p>
+          <p>
+            <input
+              class="w3-radio"
+              type="radio"
+              name="gender"
+              value="female"
+              required
+            />
+            <label>Feminino</label>
+          </p>
+          <p>
+            <input
+              class="w3-radio"
+              type="radio"
+              name="gender"
+              value=""
+              required
+            />
+            <label>Não informar</label>
+          </p>
+        </form>
       </div>
+    </section>
 
-
-      <!-- Button -->
-      <button type="submit">Adicionar</button>
-      <button type="submit">Limpar</button>
-      * Campo obrigatório
-    </form>
+    <!-- Botão -->
+    <section class="button w3-margin">
+      <div class="w3-bar">
+        <button class="w3-button w3-blue" style="width: 40%" type="button">
+          Adicionar
+        </button>
+        <button class="w3-button w3-blue-grey" style="width: 40%" type="button">
+          Limpar
+        </button>
+      </div>
+    </section>
+    <p class="w3-margin">* Campo obrigatório</p>
   </body>
 </html>
