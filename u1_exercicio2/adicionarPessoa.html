@@ -48,7 +48,7 @@
     <h2 class="w3-margin">Formulário para adicionar pessoas:</h2>
 
     <section class="section1 w3-margin">
-      <form>
+      <form id="addPessoas">
         <div class="grid w3-margin-bottom">
           <!-- Grid -->
 
@@ -84,51 +84,61 @@
     </section>
 
     <section>
-      <div class="">
-        <form class="w3-container w3-card-4">
-          <h2>Gênero*:</h2>
-          <p>
-            <input
-              class="w3-radio"
-              type="radio"
-              name="gender"
-              value="male"
-              checked
-              required
-            />
-            <label>Masculino</label>
-          </p>
-          <p>
-            <input
-              class="w3-radio"
-              type="radio"
-              name="gender"
-              value="female"
-              required
-            />
-            <label>Feminino</label>
-          </p>
-          <p>
-            <input
-              class="w3-radio"
-              type="radio"
-              name="gender"
-              value=""
-              required
-            />
-            <label>Não informar</label>
-          </p>
-        </form>
-      </div>
+      <form id="addPessoas" class="w3-container w3-card-4">
+        <h2>Gênero*:</h2>
+        <p>
+          <input
+            class="w3-radio"
+            type="radio"
+            name="gender"
+            value="male"
+            checked
+            required
+          />
+          <label>Masculino</label>
+        </p>
+        <p>
+          <input
+            class="w3-radio"
+            type="radio"
+            name="gender"
+            value="female"
+            required
+          />
+          <label>Feminino</label>
+        </p>
+        <p>
+          <input
+            class="w3-radio"
+            type="radio"
+            name="gender"
+            value=""
+            required
+          />
+          <label>Não informar</label>
+        </p>
+      </form>
     </section>
 
     <!-- Botão -->
     <section class="button w3-margin">
       <div class="w3-bar">
-        <button class="w3-button w3-blue" style="width: 40%" type="button">
+        <button
+          form="addPessoas"
+          class="w3-button w3-blue"
+          style="width: 40%"
+          type="submit"
+          formaction="/adicionadoComSucesso.html"
+        >
           Adicionar
         </button>
-        <button class="w3-button w3-blue-grey" style="width: 40%" type="button">
+
+        <button
+          form="addPessoas"
+          class="w3-button w3-blue-grey"
+          style="width: 40%"
+          type="reset"
+        >
           Limpar
         </button>
       </div>
