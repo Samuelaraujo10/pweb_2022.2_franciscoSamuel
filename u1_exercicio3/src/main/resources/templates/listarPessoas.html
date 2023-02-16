@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta codigoSecreto="1938957756" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      th:href="@{/assets/academic_graduate_cap_icon_225725.ico.crdownload}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" th:href="@{/assets/pico.min.css}" />
+    <link rel="stylesheet" th:href="@{/assets/w3.css}" />
+    <title>PWeb - by Samuel Araujo</title>
+  </head>
+  <body>
+    <div class="w3-bar w3-black w3-xlarge">
+      <!-- index -->
+      <a href="/" class="w3-bar-item w3-button w3-mobile">Inicio</a>
+
+      <!-- Adicionar Pessoas -->
+      <a href="/adicionarPessoa" class="w3-bar-item w3-button w3-mobile"
+        >Adicionar Pessoa</a
+      >
+
+      <!-- Listar Pessoas  -->
+      <a
+        href="/listarPessoas"
+        class="w3-bar-item w3-button w3-mobile w3-butto w3-deep-purple"
+        >Listar Pessoa</a
+      >
+
+      <!-- Notícias -->
+      <a
+        href="/public/noticias.html"
+        class="w3-bar-item w3-button w3-mobile w3-right"
+        >Notícias</a
+      >
+
+      <!-- Sobre -->
+      <a
+        href="/public/sobre.html"
+        class="w3-bar-item w3-button w3-mobile w3-right"
+        >Sobre o Site</a
+      >
+
+      <!-- Contato -->
+      <a
+        href="/public/contato.html"
+        class="w3-bar-item w3-button w3-mobile w3-right"
+        >Contato</a
+      >
+    </div>
+
+    <section>
+      <div class="w3-container" style="margin-top: 80px">
+        <h2 class="w3-display-topmiddle" style="margin-top: 60px">
+          Lista de pessoas
+        </h2>
+
+        <table
+          class="w3-margin w3-table w3-bordered"
+          style="margin-bottom: 50px"
+        >
+          <tr>
+            <th type="number">ID</th>
+            <th type="name">Nome Completo</th>
+            <th>E-mail</th>
+            <th>Data de Nascimento</th>
+            <th>Gênero</th>
+            <th>Editar</th>
+            <th>Remover</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Smith</td>
+            <td><a href="mailto:Smith@smith.com">Smith@smith.com</a></td>
+            <td>10/10/2002</td>
+            <td>Masculino</td>
+            <td><a href="/editar/1/">Editar</a></td>
+            <td><a href="/remover/1/">Remover</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jackson</td>
+            <td>
+              <a href="mailto:Jackson@Jackson.com">Jackson@Jackson.com</a>
+            </td>
+            <td>14/03/1999</td>
+            <td>Masculino</td>
+            <td><a href="/editar/2/">Editar</a></td>
+            <td><a href="/remover/2/">Remover</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Johnson</td>
+            <td><a href="mailto:Johnson@Johnson">Johnson@Johnson</a></td>
+            <td>21/05/2003</td>
+            <td>Masculino</td>
+            <td><a href="/editar/3/">Editar</a></td>
+            <td><a href="/remover/3/">Remover</a></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>
