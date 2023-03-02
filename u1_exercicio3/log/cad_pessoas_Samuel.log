@@ -653,3 +653,12 @@ INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Joaquim Mari
 2023-03-02 19:51:59.130  INFO 16148 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-03-02 19:51:59.133  INFO 16148 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 2023-03-02 19:51:59.347 DEBUG 16148 --- [http-nio-8080-exec-2] o.h.stat.internal.StatisticsInitiator    : Statistics initialized [enabled=false]
+2023-03-02 19:52:18.140  INFO 16148 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-02 19:52:18.142 DEBUG 16148 --- [SpringApplicationShutdownHook] o.hibernate.internal.SessionFactoryImpl  : HHH000031: Closing
+2023-03-02 19:52:18.143  INFO 16148 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-03-02 19:52:18.147 DEBUG 16148 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@210b5d32] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@6cc129cc]
+2023-03-02 19:52:18.154 DEBUG 16148 --- [SpringApplicationShutdownHook] o.h.s.i.AbstractServiceRegistryImpl      : Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2023-03-02 19:52:18.158 DEBUG 16148 --- [SpringApplicationShutdownHook] o.h.b.r.i.BootstrapServiceRegistryImpl   : Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2023-03-02 19:52:18.419  WARN 16148 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-03-02 19:52:18.423  INFO 16148 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-02 19:52:18.468  INFO 16148 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
