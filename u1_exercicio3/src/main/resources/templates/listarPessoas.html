@@ -63,7 +63,7 @@
           style="margin-bottom: 50px"
         >
           <tr>
-            <th type="number">ID</th>
+            <th type="number">id</th>
             <th type="name">Nome Completo</th>
             <th>E-mail</th>
             <th>Data de Nascimento</th>
@@ -71,34 +71,26 @@
             <th>Editar</th>
             <th>Remover</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>Smith</td>
-            <td><a href="mailto:Smith@smith.com">Smith@smith.com</a></td>
-            <td>10/10/2002</td>
-            <td>Masculino</td>
-            <td><a href="/editar/1/">Editar</a></td>
-            <td><a href="/remover/1/">Remover</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jackson</td>
+
+          <tr th:each="umaPessoa: ${todasAsPessoas}">
+            <td th:text="${umaPessoa.id}"></td>
+            <td th:text="${umaPessoa.nome}"></td>
             <td>
-              <a href="mailto:Jackson@Jackson.com">Jackson@Jackson.com</a>
+              <a
+                th:href=" 'mailto:'+${umaPessoa.email}"
+                th:text="${umaPessoa.email}"
+              >
+              </a>
             </td>
-            <td>14/03/1999</td>
-            <td>Masculino</td>
-            <td><a href="/editar/2/">Editar</a></td>
-            <td><a href="/remover/2/">Remover</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Johnson</td>
-            <td><a href="mailto:Johnson@Johnson">Johnson@Johnson</a></td>
-            <td>21/05/2003</td>
-            <td>Masculino</td>
-            <td><a href="/editar/3/">Editar</a></td>
-            <td><a href="/remover/3/">Remover</a></td>
+            <td
+              th:text="${#temporals.format(umaPessoa.dataNascimento, 'dd/MM/yyyy')}"
+            ></td>
+            <td th:text="${umaPessoa.genero}"></td>
+
+            <td><a th:href="@{/Editar/(id)(id=${umaPessoa.id})}">Editar</a></td>
+            <td>
+              <a th:href="@{/remover/(id)(id=${umaPessoa.id})}">Remover</a>
+            </td>
           </tr>
         </table>
       </div>
