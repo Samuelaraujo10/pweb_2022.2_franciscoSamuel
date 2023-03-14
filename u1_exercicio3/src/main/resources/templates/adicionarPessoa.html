@@ -1,164 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt_br">
-  <head>
-    <meta codigoSecreto="1938957756" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="shortcut icon"
-      th:href="@{/assets/academic_graduate_cap_icon_225725.ico.crdownload}"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" th:href="@{/assets/pico.min.css}" />
-    <link rel="stylesheet" th:href="@{/assets/w3.css}" />
-    <title>PWeb - by Samuel Araujo</title>
-  </head>
-  <body>
-    <div class="w3-bar w3-black w3-xlarge">
-      <!-- index -->
-      <a href="/" class="w3-bar-item w3-button w3-mobile">Inicio</a>
 
-      <!-- Adicionar Pessoas -->
-      <a
-        href="/adicionarPessoa"
-        class="w3-bar-item w3-button w3-mobile w3-deep-purple"
-        >Adicionar Pessoa</a
-      >
+<head>
+  <meta codigoSecreto="1938957756" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" th:href="@{/assets/academic_graduate_cap_icon_225725.ico.crdownload}" type="image/x-icon" />
+  <link rel="stylesheet" th:href="@{/assets/pico.min.css}" />
+  <link rel="stylesheet" th:href="@{/assets/w3.css}" />
+  <title>PWeb - by Samuel Araujo</title>
+</head>
 
-      <!-- Listar Pessoas  -->
-      <a href="/listarPessoas" class="w3-bar-item w3-button w3-mobile w3-button"
-        >Listar Pessoa</a
-      >
+<body>
+  <div class="w3-bar w3-black w3-xlarge">
+    <!-- index -->
+    <a href="/" class="w3-bar-item w3-button w3-mobile">Inicio</a>
 
-      <!-- Notícias -->
-      <a
-        href="/public/noticias.html"
-        class="w3-bar-item w3-button w3-mobile w3-right"
-        >Notícias</a
-      >
+    <!-- Adicionar Pessoas -->
+    <a href="/adicionarPessoa" class="w3-bar-item w3-button w3-mobile w3-deep-purple">Adicionar Pessoa</a>
 
-      <!-- Sobre -->
-      <a
-        href="/public/sobre.html"
-        class="w3-bar-item w3-button w3-mobile w3-right"
-        >Sobre o Site</a
-      >
+    <!-- Listar Pessoas  -->
+    <a href="/listarPessoas" class="w3-bar-item w3-button w3-mobile w3-button">Listar Pessoa</a>
 
-      <!-- Contato -->
-      <a
-        href="/public/contato.html"
-        class="w3-bar-item w3-button w3-mobile w3-right"
-        >Contato</a
-      >
-    </div>
+    <!-- Notícias -->
+    <a href="/public/noticias.html" class="w3-bar-item w3-button w3-mobile w3-right">Notícias</a>
 
-    <div class="w3-margin" style="padding:0 16px; ">
-      <h1 class="w3-margin">Formulário para adicionar pessoas:</h1>
-      <form th:action="@{/adicionarPessoa}" method="POST" th:object="${Pessoa}">
-        <div class="grid">
-          <label for="nomeCompleto"
-            >Seu Nome*:
-            <input
-              type="text"
-              id="nomeCompleto"
-              name="nomeCompleto"
-              placeholder="Nome Completo"
-              th:field="*{nome}"
-              required
-            />
-          </label>
-          <label for="email">e-mail*:
-              <input type="email" id="email" name="email" placeholder="nome@dominio.com" th:field:="*{email}" required>
-              <small class="w3-margin">Nunca divulgaremos :)</small>
-          </label>
-          
-          <label for="dataNascimento">
-                Data de Nascimento*: 
-                <input type="date" id="dataNascimento" name="dataNascimento" placeholder="dd/mm/aaaa" th:field:="*{dataNascimento}" required />
-                    
-          </label>
-        </div>
-          
-        <fieldset>
-            <form id="addPessoas" class="w3-container w3-card-4">
-              <legend>Gênero*:</legend>
-              <label for="Masculino">Masculino
-                <input
-                  class="w3-radio"
-                  type="radio"
-                  id="Masculino"
-                  name="genero"
-                  value="Masculino"
-                  th:field:="*{genero}"
-                  required
-                />  
-              </label>  
-             
-              
-              <label for="Feminino">Feminino
-                <input
-                  class="w3-radio"
-                  type="radio"
-                  id="Feminino"
-                  name="genero"
-                  value="Feminino"
-                  th:field:="*{genero}"
-                  required
-                />
-              </label>
-                
-              <label for="Não informado">Nâo informar
-                <input
-                  class="w3-radio"
-                  type="radio"
-                  id="Não informado"
-                  name="genero"
-                  value="Não informado"
-                  th:field:="*{genero}"
-                  required
-                />
-              </label>
-        </fieldset>
-          
-      <!-- Botão -->
-      <div class="grid w3-bar button w3-margin">
-            
-        <div>
-          <button
-              class="w3-button w3-blue"
-              style="width: 40%"
-              type="submit"
-          >
-            Adicionar
-          </button>
-        </div>
-              
-        <div>
-          <button
-            class="secondary w3-button w3-blue-grey"
-            style="width: 40%"
-            type="reset"
-          >
-              Limpar
-            </button>
-          </div>    
-      </div>      
-      <p class="w3-margin">* Campo obrigatório</p>    
-    </form>
-    </body>
-  </html>
-            
+    <!-- Sobre -->
+    <a href="/public/sobre.html" class="w3-bar-item w3-button w3-mobile w3-right">Sobre o Site</a>
+
+    <!-- Contato -->
+    <a href="/public/contato.html" class="w3-bar-item w3-button w3-mobile w3-right">Contato</a>
+  </div>
+
+	<div style="padding:0 16px;">
+		<h1>Formulário para cadastro de pessoas:</h1>
+		<form method="POST" th:object="${pessoa}" th:action="@{/adicionarPessoa}">
+			<div class="grid">
+				<label for="nomeCompleto">
+					Seu nomezinho *:<input type="text" placeholder="Seu nome completo." th:field="*{nome}" required />
+				</label>
+				<label for="email">
+					e-Mail *: <input type="text" placeholder="nome@dominio.com" th:field="*{email}" required />
+				</label>
+				<label for="dataNascimento">
+					Data de nascimento *: <input type="date" placeholder="dd/mm/aaaa" th:field="*{dataNascimento}"
+						required />
+				</label>
+			</div>
 
 
-              
-              
-      
-          
+			<legend>Gênero*</legend>
+			<label for="Masculino">
+				<input type="radio" id="Masculino" name="genero" value="Masculino" th:field="*{genero}"
+					required />Masculino
+			</label>
+			<label for="Feminino">
+				<input type="radio" id="Feminino" name="genero" value="Feminino" th:field="*{genero}"
+					required />Feminino
+			</label>
+			<label for="Não Informado">
+				<input type="radio" id="Não Informado" name="genero" value="Não Informado" th:field="*{genero}"
+					required>Não informar
+			</label>
 
-          
+			<div class="grid">
+				<div><button type="submit">Adicionar!</button></div>
+				<div><button type="reset" class="secondary">Limpar</button></div>
+			</div>
+			<p>* Campo obrigatório</p>
+		</form>
+	</div>
+</body>
 
-          
-      
-    
-
-    
+</html>

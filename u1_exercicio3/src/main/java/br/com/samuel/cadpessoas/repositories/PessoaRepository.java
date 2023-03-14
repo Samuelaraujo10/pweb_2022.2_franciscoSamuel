@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import br.com.samuel.cadpessoas.model.Pessoa;
 
 @Repository
-public interface PessoaRepository
-    extends JpaRepository<Pessoa, Long> {
+public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
 
 }

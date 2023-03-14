@@ -32,7 +32,7 @@ public class Pessoa implements Serializable {
   private String genero;
 
   @Column(nullable = false)
-  @DateTimeFormat(pattern = "yyyy - MM - dd")
-  private LocalDate dataNacimento;
+  @DateTimeFormat(pattern = "yyyy-MM-dd")
+  private LocalDate dataNascimento;
 
 }
